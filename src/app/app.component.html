@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="snav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <h1>{{ title.toUpperCase() }}</h1>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #snav>
+    <mat-nav-list>
+      <a mat-list-item>First link</a>
+      <a mat-list-item>Second link</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

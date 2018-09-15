@@ -5,21 +5,21 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { CoreModule } from './core/core.module';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { LibraryComponent } from './library/library.component';
-import { PlayComponent } from './play/play.component';
+import { NotFoundComponent } from './common/not-found/not-found.component';
+import { LibraryModule } from './library/library.module';
+import { PlayModule } from './play/play.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotFoundComponent,
-    LibraryComponent,
-    PlayComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    CoreModule
+    LibraryModule,
+    CoreModule,
+    PlayModule
   ],
   providers: [],
   bootstrap: [AppComponent]
